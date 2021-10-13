@@ -1,0 +1,12 @@
+把/root/目录下的所有目录（只需要一级）拷贝到/tmp/目录下：
+
+cd /root/
+list=(`ls`)
+
+for i in ${list[@]}
+do
+if [ -d $i ]
+then
+cp -r $i /tmp/
+fi
+done
